@@ -1,0 +1,100 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "simple-import-sort",
+    "unused-imports",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": [
+    "src/helpers/recap/openings.ts",
+    "**/*.asm.*",
+    "**/*.asm",
+    "**/*.wasm",
+    "src/helpers/stockfish-workers/**",
+    "src/helpers/workers/**",
+    "src/landing/_next/**",
+    "build/**",
+    ".DS_Store/**",
+    "**/*.local",
+    "src/helpers/pgn*.js",
+    "src/api/mock/recapResult.js"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 10,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module",
+    "project": "**/tsconfig.json"
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "simple-import-sort/exports": "error",
+    "unused-imports/no-unused-imports": "error",
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        "allowSingleExtends": false
+      }
+    ],
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "no-lonely-if": "error",
+    "no-inline-comments": "off",
+    "no-bitwise": "error",
+    "no-console": "off",
+    "no-unneeded-ternary": "error",
+    "wrap-regex": "error",
+    "no-duplicate-imports": "error",
+    "no-useless-computed-key": "error",
+    "no-useless-constructor": "error",
+    "no-var": "error",
+    "no-empty": [
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "prefer-const": "error",
+    "prefer-spread": "error",
+    "prefer-template": "error",
+    "symbol-description": "error",
+    "@typescript-eslint/no-explicit-any": [
+      "off",
+      {
+        "fixToUnknown": false,
+        "ignoreRestArgs": false
+      }
+    ],
+    // indent rules conflict with prettier
+    "indent": "off",
+    "@typescript-eslint/indent": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn"
+    ]
+  }
+}
